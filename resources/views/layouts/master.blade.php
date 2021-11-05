@@ -16,7 +16,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="css/adminlte.min.css">
-
+  <script type="text/javascript" src="{{asset('js/vue.js')}}"></script>
   <!-- Google Font: Source Sans Pro -->
   <!--<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">-->
 </head>
@@ -229,8 +229,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-
-    <!-- Main content -->
+          
+<!-- Main content -->
     <div class="content">
       <div class="container-fluid">
         @yield('contenido')
@@ -265,7 +265,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 
 
-@stack('scripts')
+@stack('scripts') 
 
 <!-- jQuery -->
 <script src="js/jquery.min.js"></script>

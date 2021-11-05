@@ -1,7 +1,6 @@
-
 function init() {
 
-var apiEspecie= 'http://localhost/ttd4a/public/apiEspecie'; //se crea para tener un acceso global. 
+var apiEspecie= 'http://localhost/ttd4a21/public/apiEspecie'; //se crea para tener un acceso global. 
 
 new Vue({
 	//Especificar la zona de actuación de Vue
@@ -25,7 +24,7 @@ new Vue({
 		getEspecies:function(){
 			this.$http.get(apiEspecie).then(function(j){
 				this.especies= j.data;
-			});
+			})
 
 		}
 
@@ -35,9 +34,8 @@ new Vue({
 //SECCION PARA CALCULAR UN VALOR
 computed:{
 	
-		
-	},
+},
 
-}) 
+})
 
 } window.onload = init;
