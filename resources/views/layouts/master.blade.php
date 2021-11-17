@@ -10,17 +10,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title>@yield('titulo')</title>
+  <meta name="token" id="token" value="{{ csrf_token() }}">
 
   <!-- Font Awesome Icons -->
+  <script type="text/javascript" src="{{asset('js/vue.js')}}"></script>
 
   <link rel="stylesheet" href="css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="css/adminlte.min.css">
-  <script type="text/javascript" src="{{asset('js/vue.js')}}"></script>
+  
   <!-- Google Font: Source Sans Pro -->
   <!--<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">-->
 </head>
 <body class="hold-transition sidebar-mini">
+<input type="hidden" name="route" value="{{url('/')}}">
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -273,5 +276,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="js/adminlte.min.js"></script>
+
+<script type="text/javascript" src="{{asset('js/sweetalert2.all.min.js')}}">></script>
+
 </body>
 </html>

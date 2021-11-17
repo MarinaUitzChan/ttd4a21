@@ -27,16 +27,17 @@ class MascotaController extends Controller
     {
     	$mascota=new Mascota();
 
-    	$mascota->id_mascota=$request->get('id_mascota');
+    	$mascota->id_mascota=9;
     	$mascota->nombre=$request->get('nombre');
     	$mascota->genero=$request->get('genero');
     	$mascota->peso=$request->get('peso');
+        $mascota->edad=$request->get('edad');
     	
-    	$mascota->save();
+    	return $mascota->save();
 
+        // return $request;
 
-
-
+        // return $dato=$request->get('nombre');
     }
 
     /**
@@ -61,8 +62,13 @@ class MascotaController extends Controller
     {
     	$mascota=Mascota::find($id);
     	$mascota->nombre=$request->get('nombre');
+        $mascota->nombre=$request->get('edad');
+        $mascota->nombre=$request->get('peso');
     	$mascota->nombre=$request->get('genero');
-    	$mascota->nombre=$request->get('peso');
+        $mascota->id_especie=$request->get('id_especie');
+       
+        ;
+    	
 
     	$mascota->update();
 
@@ -77,7 +83,7 @@ class MascotaController extends Controller
     public function destroy($id)
     {
     	$mascota=Mascota::find($id);
-    	$mascota->destroy();
+    	$mascota->delete();
     }
 
 }

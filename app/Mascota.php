@@ -18,7 +18,6 @@ class Mascota extends Model
     public $timestamps=true;
 
     public $fillable=[
-    	'id_mascota',
     	'nombre',
     	'genero',
     	'peso',
