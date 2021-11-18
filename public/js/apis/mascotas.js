@@ -30,6 +30,11 @@ new Vue({
 		id_mascota:'',
 		id_especie:'',
 
+
+		cantidad:1,
+		precio:0,
+		buscar:'',
+
 	},
 
 		//Se  ejecuta automaticamente cuando la pagina se crea
@@ -128,7 +133,8 @@ new Vue({
 			var jsonMascota = {nombre:this.nombre, 
 								edad:this.edad,
 								peso:this.peso,
-								genero:this.genero
+								genero:this.genero,
+								id_especie:this.id_especie
 							};
 
 							//console.log(jsonMascota);
@@ -151,9 +157,24 @@ new Vue({
 //FIN DE METHODS
 
 //SECCION PARA CALCULAR UN VALOR
-computed:{
+computed:{//Inicio de Computed
+	total:function(){
+		var t=0;
+		t= this.cantidad * this.precio;
+		return t;
+
+	},
+
+	filtroMascotas:function(){
+		return this.mascotas.filter((mascota)=>{
+			return mascota.nombre.toLowerCase().match(this.buscar.toLowerCase().trim()) || 
+					mascota.especie.especie.toLowerCase().match(this.buscar.toLowerCase().trim())
+					
+			
+		});
+	}
 	
-},
+},//fin de computed
 
 
 })
