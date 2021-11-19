@@ -151,6 +151,16 @@ new Vue({
 			this.$http.get(apiEspecie).then(function(json){
 				this.especies=json.data;
 			});
+		},
+
+		//Evento
+		obtenerRazas(e){
+			var id_especie=e.target.value;
+			//console.log(id_especie);
+
+			this.$http.get(apiEspecie + '/getRazas/' + id_especie).then(function(j){
+				console.log(j.data);
+			});
 		}
 
 },
