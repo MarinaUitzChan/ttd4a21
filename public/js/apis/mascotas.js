@@ -1,8 +1,10 @@
 function init() {
+ 
+ var ruta = document.querySelector("[name=route]").value;
 
 
-var apiMascota= 'http://localhost/ttd4a21/public/apiMascota'; //se crea para tener un acceso global. 
-var apiEspecie= 'http://localhost/ttd4a21/public/apiEspecie';
+var apiMascota=  ruta + '/apiMascota'; //se crea para tener un acceso global. 
+var apiEspecie= ruta + '/apiEspecie';
 
 new Vue({
 
@@ -160,7 +162,7 @@ new Vue({
 			var id_especie=e.target.value;
 			//console.log(id_especie);
 
-			this.$http.get(apiEspecie + '/getRazas/' + id_especie).then(function(j){
+			this.$http.get(ruta + '/getRazas/' + id_especie).then(function(j){
 				this.raza=j.data;
 			});
 		}
