@@ -47,3 +47,14 @@ Route::get('especies' , function(){
 Route::get('propietarios' , function(){
 		return view('propietarios');
 });
+
+//Rutas parametrizada
+//Route::get('metodo/{parametro}',[
+//'as' => 'metodo',
+//'uses' => 'Controlador@metodo',
+//]);
+
+Route::get('getRazas/{id_especie}', [
+'as' => 'getRazas',
+'uses' => 'EspecieController@getRazas',
+]);
