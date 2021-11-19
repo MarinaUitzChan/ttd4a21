@@ -111,9 +111,9 @@
                  </select><br>
 
 
-                 <select class="form-control">
+                 <select class="form-control" v-model='id_raza'>
                  	<option value="" disabled="">Seleccione una raza</option>
-
+                 	<option v-for="raza in raza" v-bind:value="id_raza">@{{raza.raza}}</option>
                  </select>
 
 
