@@ -34,6 +34,8 @@ Route::post('validar','AccesoController@validar');
 Route::apiResource('apiMascota','MascotaController');
 Route::apiResource('apiEspecie','EspecieController');
 Route::apiResource('apiPropietario','PropietarioController');
+Route::apiResource('apiProducto', 'ProductoController');
+
 
 //Ruta anonima
 Route::get('mascotas' ,function(){
@@ -58,3 +60,4 @@ Route::get('getRazas/{id_especie}', [
 'as' => 'getRazas',
 'uses' => 'EspecieController@getRazas',
 ]);
+
