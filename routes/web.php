@@ -42,6 +42,10 @@ Route::get('mascotas' ,function(){
 	return view ('mascotas');
 });
 
+Route::get('ventas' ,function(){
+	return view ('ventas');
+});
+
 Route::get('especies' , function(){
 		return view('especies');
 });
