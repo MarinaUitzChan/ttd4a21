@@ -18,6 +18,7 @@
 			
 			</div><!--FIN DE COL-->	
 		</div><!--FIN DE ROW-->
+
 	</div><!--FIN DE CONTAINER-->
 	
 </div><!--FIN DE VUE-->
