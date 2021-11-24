@@ -8,16 +8,18 @@
 			<div class="col-md-4"><!--INICIO DE COL-->
 				
 				<div class="input-group mb-3">
-					<input type="text" class="form-control" placeholder="Escriba el codigo de producto" arial-label="Recipient's username" arial-describedby="basic-addon2">
+					<input type="text" class="form-control" placeholder="Escriba el codigo de producto" arial-describedby="basic-addon2" v-model="sku">
 
 					<div class="input-group-append">
-						<button class="btn btn-outline-secondary" type="button">Buscar</button>
+						<button class="btn btn-outline-secondary" type="button" @click="buscarProducto()">Buscar</button>
 					</div>	
 
 				</div>
 			
 			</div><!--FIN DE COL-->	
 		</div><!--FIN DE ROW-->
+
+		@{{ventas}}
 
 	</div><!--FIN DE CONTAINER-->
 	

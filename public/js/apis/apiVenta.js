@@ -17,13 +17,35 @@ new Vue({
 	//Y constantes.
 	data:{
 		mensaje: 'HOLA MUNDO CRUEL',
-		
+		sku:'',
+		ventas:[],
 
 	},
 
 	//INICIO DE METHODS
 	methods:{
 		
+		buscarProducto:function(){
+
+		if(this.sku){//INICIO DE IF(THIS.SKU)
+
+			var producto = {}
+			this.$http.get(apiProducto + '/' + this.sku).then(function(j){
+				producto = {
+					sku:j.data.sku,
+					nombre:j.data.nombre,
+					precio:j.data.precio,
+					cantidad:1, 
+					total:j.data.precio
+				};
+
+	
+					this.ventas.push(producto);
+				this.sku='';
+			});
+		}//FIN DE IF(THIS.SKU)
+
+		}
 
 },
 //FIN DE METHODS
