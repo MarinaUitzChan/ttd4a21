@@ -19,6 +19,8 @@ new Vue({
 		mensaje: 'HOLA MUNDO CRUEL',
 		sku:'',
 		ventas:[],
+		cantidades:[],
+		cant:1,
 
 	},
 
@@ -41,6 +43,7 @@ new Vue({
 
 	
 					this.ventas.push(producto);
+					this.cantidades.push(1);
 				this.sku='';
 			});
 		}//FIN DE IF(THIS.SKU)
