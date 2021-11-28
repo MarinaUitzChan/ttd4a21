@@ -87,7 +87,7 @@ new Vue({
 				this.edad='';
 				this.peso='';
 				this.genero='';
-				this.id_especie;
+				this.id_especie='';
 				
 
 			}).catch(function(j){
