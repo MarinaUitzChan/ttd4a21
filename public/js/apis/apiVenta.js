@@ -59,10 +59,28 @@ computed:{
 		return (id)=>{
 			var total = 0;
 				total=this.ventas[id].precio*this.cantidades[id];
+
+			//ACTUALIZO EL TOTAL DEL PRODUCTIO EN EL ARRAY VENTAS
+			this.ventas[id].total=total;
+
+			//ACTUALIZO LA CANTIDAD EN EL ARRAY VENTAS
+			this.ventas[id].cantidad=this.cantidades[id];
+
 			return total.toFixed(1);//Regresa ek total con un decimal
 
 		}
-	},
+	},//FIN DE TOTALPRODUCTO
+
+	subTotal(){
+		var total=0;
+
+		//Se recorre del ultimo hacia abajo
+		for (var i = this.ventas.length - 1; i >= 0; i--) {
+			total=total+this.ventas[i].total;
+		}
+
+		return total.toFixed(1);
+	},//FIN DEL SUBTOTAL
 	
 },
 
