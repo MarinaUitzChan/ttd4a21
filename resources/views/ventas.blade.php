@@ -56,24 +56,31 @@
 		<div class="row">
 			<div class="col-md-8"></div>
 
-			<div class="card"> <div class="card-body"> <div class="col md-4"> <table
-			class="table-bordered table-condensed"> <tr> <th style="background:
-			#ffff66">Subtotal</th> <td>$ SUBTOTAL</td> </tr>
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body">
+						
+							<table class="table table-bordered table-condensed">
+								<tr>
+									<th style="background: #ffff66">Subtotal</th>
+									<td>$ SUBTOTAL</td>
+								</tr>
 
-							<tr>
-								<th style="background: #ffff66">IVA</th>
-								<td>$ IVA</td>
-							</tr>
-								
-							<tr>
-								<th style="background: #ffff66">TOTAL</th>
-								<td>$ SUMATOTAL</td>
-							</tr>
+								<tr>
+									<th style="background: #ffff66">IVA</th>
+									<td>$ IVA</td>
+								</tr>
+									
+								<tr>
+									<th style="background: #ffff66">TOTAL</th>
+									<td>$ SUMATOTAL</td>
+								</tr>
 
-						</table>
-					</div>
-				</div>
-			</div>
+							</table>
+						
+					</div><!--FIN DE CARD DEL BODY-->
+				</div><!--FIN DE CARD-->
+			</div><!--FIN DE LA COL-MD-4-->
 			
 		</div>
 
