@@ -39,7 +39,7 @@
 									<td>@{{venta.nombre}}</td>
 									<td>@{{venta.precio}}</td>
 									<td><input type="number" v-model.number="cantidades[index]" min="1"></td>
-									<td>@{{venta.total}}</td>
+									<td>@{{totalProducto(index)}}</td>
 								</tr>
 							</tbody>
 						</table>

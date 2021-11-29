@@ -55,6 +55,14 @@ new Vue({
 
 //SECCION PARA CALCULAR UN VALOR
 computed:{
+	totalProducto(){
+		return (id)=>{
+			var total = 0;
+				total=this.ventas[id].precio*this.cantidades[id];
+			return total.toFixed(1);//Regresa ek total con un decimal
+
+		}
+	},
 	
 },
 
