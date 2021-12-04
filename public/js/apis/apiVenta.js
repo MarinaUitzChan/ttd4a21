@@ -49,6 +49,10 @@ new Vue({
 			});
 		}//FIN DE IF(THIS.SKU)
 
+		},
+
+		eliminarProducto:function(id){
+			this.ventas.splice(id,1); //Splice es eliminar la mascota
 		}
 
 },
@@ -101,13 +105,14 @@ computed:{
 	},
 
 	noArticulos(){
+		var acum=0;
 		for (var i = this.ventas.length - 1; i >= 0; i--) {
 			acum=acum+this.ventas[i].cantidad;
 		}
 		return acum;
 	},
 
-	
+
 	
 },
 

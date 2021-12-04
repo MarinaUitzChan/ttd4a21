@@ -28,6 +28,7 @@
 							<thead>
 								<th style="background: #ffff66">SKU</th>
 								<th style="background: #ffff66">PRODUCTO</th>
+								<th style="background: #ffff66">OPER.</th>
 								<th style="background: #ffff66">PRECIO</th>
 								<th style="background: #ffff66">CANTIDAD</th>
 								<th style="background: #ffff66">TOTAL</th>
@@ -37,6 +38,11 @@
 								<tr v-for="(venta,index) in ventas">
 									<td>@{{venta.sku}}</td>
 									<td>@{{venta.nombre}}</td>
+									<td>
+										<button class="btn btn-default btn-sm" >
+											<i class="fas fa-trash" @click="eliminarProducto(index)"></i>
+										</button>
+									</td>
 									<td>@{{venta.precio}}</td>
 									<td><input type="number" v-model.number="cantidades[index]" min="1"></td>
 									<td>@{{totalProducto(index)}}</td>
