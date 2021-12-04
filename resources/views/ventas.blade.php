@@ -78,6 +78,11 @@
 									<td><b>$ @{{granTotal}}</b></td>
 								</tr>
 
+								<tr>
+									<th style="background: #ffff66">Articulos :</th>
+									<td>@{{noArticulos}}</td>
+								</tr>
+
 							</table>
 						
 					</div><!--FIN DE CARD DEL BODY-->
