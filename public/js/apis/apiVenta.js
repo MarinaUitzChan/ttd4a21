@@ -21,6 +21,7 @@ new Vue({
 		ventas:[],
 		cantidades:[],
 		cant:1,
+		auxSubTotal:0,
 
 	},
 
@@ -79,8 +80,19 @@ computed:{
 			total=total+this.ventas[i].total;
 		}
 
+		//Mando una copia del subtotal a la seccion del data 
+		//Para el uso de otros calculos
+		this.auxSubTotal=total.toFixed(1);
 		return total.toFixed(1);
 	},//FIN DEL SUBTOTAL
+
+	iva(){
+		var auxIva=0;
+		
+		auxIva = this.auxSubTotal*0.16;
+		return auxIva.toFixed(1);
+
+	},
 	
 },
 
